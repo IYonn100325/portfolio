@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/325/325686.png">        
+    <title>Experience | My Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Experience</a>
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </header>
+
+    <section class="experience-section">
+        <div class="experience-container">
+            <h2 class="heading">My <span>Experience</span></h2>
+            <div class="experience-box">
+                
+                <div class="experience-content status-card">
+                    <div class="content">
+                        <div class="status-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3>Currently Seeking Opportunities</h3>
+                        <p>Entry-Level Hardware Technician & Developer</p>
+                        <p class="details">
+                            I am currently looking for my first formal industry role, internship, or apprenticeship. While I have no formal commercial experience yet, I have spent my academic career building fundamental troubleshooting skills, managing hardware configurations, and studying modern web design principles. Check out my Education and Certifications pages to see my qualifications!
+                        </p>
+                        <div class="card-action">
+                            <a href="contact.html" class="btn">Let's Connect</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let menuIcon = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('#navbar');
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('fa-xmark');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/325/325686.png">        
+        <title>Certifications | My Portfolio</title>
+    </head>
+    
+<body>
+    <header>
+        <a href="index.html" class="logo">Certifications</a>
+        
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="education.html" target="_blank" rel="noopener noreferrer">Education</a>
+            <a href="aboutme.html" target="_blank" rel="noopener noreferrer">About Me</a>
+            <a href="certifications.html" class="active">Certifications</a>
+            <a href="experience.html" target="_blank" rel="noopener noreferrer">Experience</a>
+            <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact</a>
+        </nav>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </header>
+
+    <section class="certs-section">
+        <div class="certs-container">
+            <h2 class="heading">My <span>Certifications</span></h2>
+            
+            <div class="certs-grid">
+                
+                <a href="Device Configuration and Management.pdf" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i> 2026</div>
+                            <h3>Device Configuration</h3>
+                            <p>Configuration & Management</p>
+                            <div class="cert-display">
+                                <iframe src="Device Configuration and Management.pdf" class="cert-media" width="100%" height="180px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="HTML and CSS.pdf" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i> 2026</div>
+                            <h3>HTML and CSS</h3>
+                            <p>Web Development Foundations</p>
+                            <div class="cert-display">
+                                <iframe src="HTML and CSS.pdf" class="cert-media" width="100%" height="180px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="OSHA 10HOURS+.pdf" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i> 2026</div>
+                            <h3>OSHA 10-Hour</h3>
+                            <p>General Industry Safety</p>
+                            <div class="cert-display">
+                                <iframe src="OSHA 10HOURS+.pdf" class="cert-media" width="100%" height="180px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Career Ready_0001.pdf" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i> 2026</div>
+                            <h3>Career Ready</h3>
+                            <p>Professional Development</p>
+                            <div class="cert-display">
+                                <iframe src="Career Ready_0001.pdf" class="cert-media" width="100%" height="180px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Certificate Of Achievement (Information Technology Services).pdf" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i> 2026</div>
+                            <h3>IT Services</h3>
+                            <p>Certificate of Achievement</p>
+                            <div class="cert-display">
+                                <iframe src="Certificate Of Achievement (Information Technology Services).pdf" class="cert-media" width="100%" height="180px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Certificate of Achievement (Internetworking)_0001.pdf" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i> 2026</div>
+                            <h3>Internetworking</h3>
+                            <p>Certificate of Achievement</p>
+                            <div class="cert-display">
+                                <iframe src="Certificate of Achievement (Internetworking)_0001.pdf" class="cert-media" width="100%" height="180px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Competency In Technology Fundamentals.pdf" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <div class="content">
+                            <div class="year"><i class="fa-solid fa-calendar-days"></i> 2025</div>
+                            <h3>Tech Fundamentals</h3>
+                            <p>Competency Certification</p>
+                            <div class="cert-display">
+                                <iframe src="Competency In Technology Fundamentals.pdf" class="cert-media" width="100%" height="180px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let menuIcon = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('#navbar');
+
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('fa-xmark');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
