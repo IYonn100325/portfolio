@@ -1,5 +1,5 @@
 /* ==================== CORE SETUP & TYPOGRAPHY ==================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700;800&display=swap');
 
 *{
     margin: 0;
@@ -22,6 +22,13 @@ body{
     background-color: black;
     color: white;
     font-family: 'Poppins', sans-serif;
+}
+
+/* Hides default native spin arrows on phone number field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* ==================== NAVIGATION HEADER ==================== */
@@ -81,113 +88,7 @@ section {
     box-sizing: border-box;
 }
 
-/* ==================== RESPONSIVE DISPLAYS (TABLET & MOBILE) ==================== */
-@media(max-width:995px) {
-    header {
-        padding: 2rem 5%; 
-        background-color: black;
-    }
-
-    #menu-icon {
-        display: block !important;
-        color: white !important;
-        font-size: 3.6rem;
-        z-index: 1001;
-        cursor: pointer;
-    }
-
-    nav {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 60%; 
-        border-left: 3px solid #881d92;
-        border-bottom: 3px solid #881d92;
-        border-bottom-left-radius: 2rem;
-        padding: 2rem 1rem;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-        display: none; 
-        z-index: 1000;
-    }
-
-    nav.active{
-        display: block;
-    }
-
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 2.5rem 0;
-        margin-left: 0;
-        text-align: right;
-        padding-right: 2rem;
-    }
-
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #881d92;
-    }
-
-    .home{
-        flex-direction: column-reverse; 
-        margin: 0;
-        padding: 12rem 5% 5rem;
-        gap: 3rem;
-    }
-
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-
-    .home-content h1{
-        font-size: 5rem;
-    }
-
-    .home-img img{
-        width: 60vw;
-        height: 80vw;
-        margin-top: 2rem;
-    }
-
-    .contact-form .input-box {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 1000px){
-    .home{
-        gap: 4rem;
-    }
-}
-
-@media (max-width: 850px) {
-    .about-wrapper {
-        flex-direction: column !important;
-        gap: 3rem;
-    }
-    
-    .about-bio, 
-    .about-info {
-        width: 100% !important;
-    }
-
-    section {
-        padding-top: 12rem;
-    }
-    
-    .education .heading,
-    .certs-section .heading,
-    .contact-section .heading,
-    .about-section .heading {
-        font-size: 3.5rem;
-    }
-}
-
-/* ==================== HOME SCREEN CONTENT STYLES ==================== */
+/* ==================== HOME SCREEN STYLES ==================== */
 .home {
     display: flex;
     justify-content: space-between; 
@@ -237,7 +138,6 @@ span{
 }
 
 .home-img img {
-    position: relative;
     width: 32vw;
     height: 44vw; 
     border-radius: 50%; 
@@ -273,28 +173,7 @@ span{
     box-shadow: 0 0 25px #881d92;
 }
 
-.btn{
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background-color: black;
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: #881d92;
-    letter-spacing: 0.3rem;
-    font-weight: 600;
-    border: 2px solid #881d92;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.btn:hover{
-    transform: scale(1.05);
-    background-color: #881d92;
-    color: black;
-    box-shadow: 0 0 25px #881d92;
-}
-
-/* ==================== TYPING TEXT LOGIC ==================== */
+/* ==================== TYPING TEXT ANIMATION ==================== */
 .typing-text {
     color: #881d92;
     position: relative;
@@ -330,14 +209,14 @@ span{
 }
 
 @keyframes words {
-    0%, 20% { content: "Aspiring Hardware Technician"; }
+    0%, 20% { content: "Hardware Technician"; }
     21%, 40% { content: "Developer"; }
     41%, 60% { content: "Web Designer"; }
     61%, 80% { content: "Gamer"; }
     81%, 100% { content: "Music Enthusiast"; }
 }
 
-/* ==================== EDUCATION SECTION STYLES ==================== */
+/* ==================== EDUCATION STYLES ==================== */
 .education {
     display: flex;
     justify-content: center;
@@ -428,7 +307,7 @@ span{
 
 .certs-container {
     width: 100%;
-    max-width: 1400px; /* Maximize layout area to fit multiple items horizontally */
+    max-width: 1400px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,7 +322,6 @@ span{
 
 .certs-grid {
     display: grid;
-    /* Clean rows that wrap elegantly based on monitor display size */
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
     gap: 2.5rem;
     width: 100%;
@@ -485,7 +363,6 @@ span{
     font-weight: 600;
 }
 
-/* PDF Display Container Elements */
 .cert-display {
     margin-top: 1.5rem;
     width: 100%;
@@ -497,12 +374,18 @@ span{
 .cert-media {
     display: block;
     width: 100%;
-    height: 180px; /* Keep PDF containers square and aligned in rows */
+    height: 180px; 
     object-fit: contain;
     background-color: #ffffff;
 }
 
-/* ==================== ABOUT ME SECTION STYLES ==================== */
+.cert-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* ==================== ABOUT ME STYLES ==================== */
 .about-section {
     display: flex;
     justify-content: center;
@@ -512,7 +395,7 @@ span{
 
 .about-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -528,13 +411,13 @@ span{
 .about-wrapper {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 3rem;
 }
 
 .about-bio, 
 .about-info {
-    width: 100% !important;
+    flex: 1;
     background-color: #161616; 
     border: 2px solid #881d92;
     border-radius: 2rem;
@@ -599,7 +482,7 @@ span{
     font-weight: 300;
 }
 
-/* ==================== CONTACT ME SECTION STYLES ==================== */
+/* ==================== CONTACT ME STYLES ==================== */
 .contact-section {
     display: flex;
     justify-content: center;
@@ -670,21 +553,14 @@ span{
     align-self: center;
 }
 
-.cert-link {
-    text-decoration: none;
-    color: inherit; /* Ensures your fonts stay white and clean instead of changing to link blue */
-    display: block;
-}
-
-/* ==================== EXPERIENCE SECTION STYLES ==================== */
+/* ==================== EXPERIENCE STYLES ==================== */
 .experience-section {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     min-height: 100vh;
-    /* Pushes the container down to keep it clear of your navigation bar */
-    padding: 22rem 9% 5rem; 
+    padding: 14rem 9% 5rem; 
     box-sizing: border-box;
 }
 
@@ -723,7 +599,6 @@ span{
     box-shadow: 0 0 25px #881d92;
 }
 
-/* Specific inner styles for centering the statement card content */
 .status-card {
     text-align: center;
     padding: 4rem 3rem;
@@ -755,7 +630,6 @@ span{
     margin-top: 3rem;
 }
 
-/* Subtle glowing pulse effect for the icon */
 @keyframes pulse {
     from {
         transform: scale(1);
@@ -764,5 +638,120 @@ span{
     to {
         transform: scale(1.08);
         text-shadow: 0 0 15px rgba(136, 29, 146, 0.6);
+    }
+}
+
+/* ==================== RESPONSIVE DISPLAYS (TABLET & MOBILE) ==================== */
+@media(max-width:995px) {
+    header {
+        padding: 2rem 5%; 
+        background-color: black;
+    }
+
+    #menu-icon {
+        display: block !important;
+        color: white !important;
+        font-size: 3.6rem;
+        z-index: 1001;
+        cursor: pointer;
+    }
+
+    /* Uses transform/right positioning for lag-free performance on mobile browser engines */
+    nav {
+        position: absolute;
+        top: 100%;
+        right: -100%; 
+        width: 60%; 
+        border-left: 3px solid #881d92;
+        border-bottom: 3px solid #881d92;
+        border-bottom-left-radius: 2rem;
+        padding: 2rem 1rem;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(255,255,255,0.05);
+        z-index: 1000;
+        transition: right 0.3s ease-in-out;
+    }
+
+    nav.active{
+        right: 0;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 2.5rem 0;
+        margin-left: 0;
+        text-align: right;
+        padding-right: 2rem;
+        border-bottom: none !important;
+    }
+
+    nav a:hover,
+    nav a.active{
+        color: #881d92;
+        background-color: transparent;
+        padding-right: 2rem;
+    }
+
+    .home{
+        flex-direction: column-reverse; 
+        margin: 0;
+        padding: 12rem 5% 5rem;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .home-content h3 {
+        justify-content: center;
+    }
+
+    .home .home-content h3{
+        font-size: 2.2rem;
+    }
+
+    .home-content h1{
+        font-size: 4.5rem;
+    }
+
+    /* Sets explicit mobile circle dimensions to prevent image squishing */
+    .home-img img{
+        width: 240px;
+        height: 240px;
+        margin-top: 2rem;
+    }
+
+    .contact-form .input-box {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .about-wrapper {
+        flex-direction: column !important;
+        gap: 3rem;
+    }
+    
+    .about-bio, 
+    .about-info {
+        width: 100% !important;
+    }
+
+    section {
+        padding-top: 12rem;
+    }
+    
+    .education .heading,
+    .certs-section .heading,
+    .contact-section .heading,
+    .about-section .heading,
+    .experience-section .heading {
+        font-size: 3.5rem;
     }
 }
